@@ -41,6 +41,7 @@ NOTE: `--datair` sets the location of your blockchain
 NOTE: `init genesis.json` sets your config file
 
 ## Start Geth with your custom data source
+
 After this is configured, start geth with your custom data source:
 
 Run `geth --datadir chaindata`
@@ -50,6 +51,7 @@ After that, there may be errors starting geth. One thing I noticed is that long 
 Once that works and geth is running, open a new tab.
 
 ## Attach MIST via RPC
+
  We need to attach the .ipc file for geth and MIST (assuming we want to dev w/ MIST)
 
  For geth:
@@ -84,4 +86,4 @@ Run `open -a /applications/mist.app/contents/macos/mist --args --rpc /path/to/ge
 Once this is set up, in your tab from step 3, you can run `miner.start(1)` to start mining. Initially it will build the Directed Acyclic Graph (DAG) which may take a few minutes. It will display `Generating DAG in progress ...`. After mining commences, you will see the mined test ether in your wallet in MIST.
 
 
-![Mining On Private Network](http://www.giphy.com/gifs/cft5QkrQcJKTQJUOd8 "Mining gif")
+![Mining On Private Network](https://media.giphy.com/media/cft5QkrQcJKTQJUOd8/giphy.gif "Mining gif")
