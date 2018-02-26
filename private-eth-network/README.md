@@ -34,7 +34,7 @@ Copy the genesis code from above and paste it into a new genesis.json file.
 
 Create a folder called chaindata in the same folder as genesis.json.
 
-`geth --datadir chaindata init genesis.json`
+Run `geth --datadir chaindata init genesis.json`
 
 NOTE: `--datair` sets the location of your blockchain 
 
@@ -43,7 +43,7 @@ NOTE: `init genesis.json` sets your config file
 ## Start Geth with your custom data source
 After this is configured, start geth with your custom data source:
 
-`geth --datadir chaindata`
+Run `geth --datadir chaindata`
 
 After that, there may be errors starting geth. One thing I noticed is that long paths may break geth. If you see an error like `.../geth.ipc bind invalid` , you need to shorten your path.
 
@@ -54,14 +54,19 @@ Once that works and geth is running, open a new tab.
 
  For geth:
 
- ` geth attach ipc:[your/path/to/geth.ipc]`
+ Run `geth attach ipc:[your/path/to/geth.ipc]`
+
+
+ ## Start mist using your private chain/network
 
  Then start MIST attached via RPC to your geth instance, open a new terminal window and enter:
-`/Applications/Mist.app/Contents/MacOs/Mist --rpc /your/path/to/geth.ipc`
+ 
+ Run `/Applications/Mist.app/Contents/MacOs/Mist --rpc /your/path/to/geth.ipc`
 
 
 If you have Sierra (10.12.2) it was reported that you need to open MIST with a command similar to this:
-`open -a /applications/mist.app/contents/macos/mist --args --rpc /path/to/geth.ipc`
+
+Run `open -a /applications/mist.app/contents/macos/mist --args --rpc /path/to/geth.ipc`
 
 
  After that command MIST open up should load with your private network.
@@ -78,10 +83,5 @@ If you have Sierra (10.12.2) it was reported that you need to open MIST with a c
 
 Once this is set up, in your tab from step 3, you can run `miner.start(1)` to start mining. Initially it will build the Directed Acyclic Graph (DAG) which may take a few minutes. It will display `Generating DAG in progress ...`. After mining commences, you will see the mined test ether in your wallet in MIST.
 
-Some things to play with:
 
-* Create another account in mist and send ether to that
-//TODO: Add more exercises here
-
-![Mining On Priavte Network](http://www.giphy.com/gifs/cft5QkrQcJKTQJUOd8)
-
+![Mining On Private Network](http://www.giphy.com/gifs/cft5QkrQcJKTQJUOd8 "Mining gif")
