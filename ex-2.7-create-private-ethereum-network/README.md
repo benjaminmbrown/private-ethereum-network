@@ -40,3 +40,4 @@ To start geth with your custom data source:
 
 `geth --datadir chaindata`
 
+After that, there may be errors starting geth. We need to attach the .ipc file for geth and MIST (assuming we want to dev w/ MIST)
